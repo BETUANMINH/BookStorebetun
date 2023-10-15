@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookShoppingCartMVC.Models
 {
-    [Table("OrderStatus")]
+    [Table("OrderStatus_HE176084")]
     public class OrderStatus
     {
         public int Id { get; set; }

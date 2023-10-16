@@ -11984,11 +11984,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\code\\Test\\BookShoppingCartMVC\\BookShoppingCartMVC.csproj",
+      "projectUniqueName": "E:\\code\\Test\\BookStorebetun\\BookShoppingCartMVC.csproj",
       "projectName": "BookShoppingCartMVC",
-      "projectPath": "E:\\code\\Test\\BookShoppingCartMVC\\BookShoppingCartMVC.csproj",
+      "projectPath": "E:\\code\\Test\\BookStorebetun\\BookShoppingCartMVC.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\code\\Test\\BookShoppingCartMVC\\obj\\",
+      "outputPath": "E:\\code\\Test\\BookStorebetun\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JTpWuOLCtLrkKB4RqjzCEibUyDDq/Fev72EXuArrwao=",
+  "Hash": "r7au9Lw4dQcedQJFZThc69SNy+SX3a3HtHkx5lS7i7c=",
   "Source": "BookShoppingCartMVC",
   "BasePath": "_content/BookShoppingCartMVC",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "BookShoppingCartMVC\\wwwroot",
       "Source": "BookShoppingCartMVC",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "Pattern": "**"
     }
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.11\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\code\\Test\\BookShoppingCartMVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookShoppingCartMVC.styles.css",
+      "Identity": "E:\\code\\Test\\BookStorebetun\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookShoppingCartMVC.styles.css",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "RelativePath": "BookShoppingCartMVC.styles.css",
       "AssetKind": "All",
@@ -1051,13 +1051,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\code\\Test\\BookShoppingCartMVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookShoppingCartMVC.styles.css"
+      "OriginalItemSpec": "E:\\code\\Test\\BookStorebetun\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookShoppingCartMVC.styles.css"
     },
     {
-      "Identity": "E:\\code\\Test\\BookShoppingCartMVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BookShoppingCartMVC.bundle.scp.css",
+      "Identity": "E:\\code\\Test\\BookStorebetun\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BookShoppingCartMVC.bundle.scp.css",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "RelativePath": "BookShoppingCartMVC.bundle.scp.css",
       "AssetKind": "All",
@@ -1068,13 +1068,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\code\\Test\\BookShoppingCartMVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BookShoppingCartMVC.bundle.scp.css"
+      "OriginalItemSpec": "E:\\code\\Test\\BookStorebetun\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BookShoppingCartMVC.bundle.scp.css"
     },
     {
-      "Identity": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "RelativePath": "css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\css\\site.css",
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\css\\site.css",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\favicon.ico",
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\favicon.ico",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\images\\NoImage.png",
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\NoImage.png",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "RelativePath": "images/NoImage.png",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\images\\NoImage.png"
     },
     {
-      "Identity": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\images\\TheCalloftheWild.jpg",
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\TheCalloftheWild.jpg",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\code\\Test\\BookShoppingCartMVC\\wwwroot\\",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
       "BasePath": "_content/BookShoppingCartMVC",
       "RelativePath": "images/TheCalloftheWild.jpg",
       "AssetKind": "All",

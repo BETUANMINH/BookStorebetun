@@ -580,3 +580,8 @@ E:\code\Test\BookStorebetun\obj\Debug\net7.0\refint\BookShoppingCartMVC.dll
 E:\code\Test\BookStorebetun\obj\Debug\net7.0\BookShoppingCartMVC.pdb
 E:\code\Test\BookStorebetun\obj\Debug\net7.0\BookShoppingCartMVC.genruntimeconfig.cache
 E:\code\Test\BookStorebetun\obj\Debug\net7.0\ref\BookShoppingCartMVC.dll
+E:\code\Test\BookStorebetun\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+E:\code\Test\BookStorebetun\bin\Debug\net7.0\MailKit.dll
+E:\code\Test\BookStorebetun\bin\Debug\net7.0\MimeKit.dll
+E:\code\Test\BookStorebetun\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+E:\code\Test\BookStorebetun\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll

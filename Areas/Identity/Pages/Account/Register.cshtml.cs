@@ -31,14 +31,16 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-        private static EmailSenderCustom emailSenderCustom = new EmailSenderCustom();
+        private IEmailSenderCustom _emailSenderCustom;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IEmailSenderCustom emailSenderCustom
+            )
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -46,6 +48,8 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _emailSenderCustom = emailSenderCustom;
+
         }
 
         /// <summary>
@@ -143,7 +147,7 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account
                         pageHandler: null,
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
-                    emailSenderCustom.SendEmailConfirmRegister(user.Email,
+                     await _emailSenderCustom.SendEmailConfirmRegister(user.Email,
                                                $"Please confirm your account by {EmailConfirmationUrl}",user.Email);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)

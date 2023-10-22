@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\TheCalloftheWild.jpg"
     },
     {
+      "Id": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\eb48a2ad-ce3e-40b5-9251-8b59a75a0b70-BeTuanMinhSwimlance.png",
+      "PackagePath": "staticwebassets\\images\\eb48a2ad-ce3e-40b5-9251-8b59a75a0b70-BeTuanMinhSwimlance.png"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BookShoppingCartMVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

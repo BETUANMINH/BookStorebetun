@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BookShoppingCartMVC.Models.OrderDetail>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Book)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            
+            <th>
+                Total
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Book.AuthorName)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            
+            <td>
+                @(item.Quantity*item.UnitPrice)
+            </td>
+        </tr>
+            
+}
+       
+       
+    </tbody>
+</table>
+<h4>
+Total:
+    @{
+        // Sử dụng LINQ để tính tổng số tiền cho tất cả sản phẩm
+        var total = Model.Sum(item => item.Quantity * item.UnitPrice);
+    }
+    @total
+</h4>
+
+
+<a class="btn btn-success" asp-action="Edit" asp-route-id="@ViewBag.OrderId">Accepted</a>
+<a class="btn btn-danger" asp-action="Details" asp-route-id="@ViewBag.OrderId">Rejected</a>

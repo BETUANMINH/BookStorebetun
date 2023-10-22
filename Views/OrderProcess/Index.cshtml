@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BookShoppingCartMVC.Models.Order>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in ViewBag.Orders) {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.UserName
+            </td>
+            <td>
+                @item.CreateDate
+            </td>
+                <td>
+                    @item.StatusName
+                </td>
+                <td>
+                    @if (item.IsDeleted)
+                    {
+                        <text>Yes</text>
+                    }
+                    else
+                    {
+                        <text>No</text>
+                    }
+
+                </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

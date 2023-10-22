@@ -8,17 +8,20 @@ using Microsoft.EntityFrameworkCore;
 using BookShoppingCartMVC.Data;
 using BookShoppingCartMVC.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 
 namespace BookShoppingCartMVC.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class BooksController : Controller
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
 
-        public BooksController(ApplicationDbContext context)
+        public BooksController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         // GET: Books
@@ -59,14 +62,36 @@ namespace BookShoppingCartMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Book book)
+        // get the book object from the form contain image file
+        public async Task<IActionResult> Create(Book book, IFormFile Image)
         {
-       
+            
+                string fileName = UploadFile(Image);
+                book.Image = fileName;
+
+
+                // insert record
                 _context.Add(book);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            //ViewData["GenreId"] = new SelectList(_context.Genres, "Id", "GenreName", book.GenreId);
-            //return View(book);
+            
+            ViewData["GenreId"] = new SelectList(_context.Genres, "Id", "GenreName", book.GenreId);
+            return View(book);
+        }
+        private string UploadFile(IFormFile file)
+        {
+            string fileName = null;
+            if (file != null)
+            {
+                string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "Images");
+                fileName = Guid.NewGuid().ToString() + "-" + file.FileName;
+                string filePath = Path.Combine(uploadDir, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+            }
+            return fileName;
         }
 
         // GET: Books/Edit/5
@@ -82,7 +107,7 @@ namespace BookShoppingCartMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["GenreId"] = new SelectList(_context.Genres, "Id", "GenreName", book.GenreId);
+            ViewData["GenreId"] = new SelectList(_context.Genres, "Id", "GenreName");
             return View(book);
         }
 

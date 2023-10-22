@@ -65,18 +65,41 @@ namespace BookShoppingCartMVC.Controllers
         // get the book object from the form contain image file
         public async Task<IActionResult> Create(Book book, IFormFile Image)
         {
-            
+         
+            //if extension is not valid
+            if (Image != null && Image.Length > 0)
+            {
+                if (Image.ContentType.ToLower() != "image/jpeg" &&
+                    Image.ContentType.ToLower() != "image/jpg" &&
+                    Image.ContentType.ToLower() != "image/png" &&
+                    Image.ContentType.ToLower() != "image/gif")
+                {
+                    ModelState.AddModelError("Image", "Only images (.jpg, .png, .gif) are allowed");
+                    ViewData["GenreId"] = new SelectList(_context.Genres, "Id", "GenreName", book.GenreId);
+                    return View(book);
+                }
+            }
+            // check if the image file is not null
+            if (Image != null) {
                 string fileName = UploadFile(Image);
                 book.Image = fileName;
+            }
+            else
+            {
+                book.Image = "NoImage.png";
+            }
+            // check if the book object is valid
+
+        
 
 
                 // insert record
                 _context.Add(book);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+              
             
-            ViewData["GenreId"] = new SelectList(_context.Genres, "Id", "GenreName", book.GenreId);
-            return View(book);
+            
         }
         private string UploadFile(IFormFile file)
         {

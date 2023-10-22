@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r7au9Lw4dQcedQJFZThc69SNy+SX3a3HtHkx5lS7i7c=",
+  "Hash": "QUMg2xNO9CbLe5inKQlVF0vZkrSUlFAHJG8RFK5NMlk=",
   "Source": "BookShoppingCartMVC",
   "BasePath": "_content/BookShoppingCartMVC",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\5f2456be-3d8d-42d7-b1af-6e02eb03c7d4-Screenshot 2023-09-18 134254.png",
+      "SourceId": "BookShoppingCartMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
+      "BasePath": "_content/BookShoppingCartMVC",
+      "RelativePath": "images/5f2456be-3d8d-42d7-b1af-6e02eb03c7d4-Screenshot 2023-09-18 134254.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5f2456be-3d8d-42d7-b1af-6e02eb03c7d4-Screenshot 2023-09-18 134254.png"
     },
     {
       "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\NoImage.png",

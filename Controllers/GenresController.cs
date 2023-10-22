@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookShoppingCartMVC.Data;
 using BookShoppingCartMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookShoppingCartMVC.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class GenresController : Controller
     {
         private readonly ApplicationDbContext _context;

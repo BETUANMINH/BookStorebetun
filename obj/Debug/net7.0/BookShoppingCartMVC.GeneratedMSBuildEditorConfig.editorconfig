@@ -232,6 +232,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/code/Test/BookStorebetun/Views/OrderProcess/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/code/Test/BookStorebetun/Views/OrderProcess/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

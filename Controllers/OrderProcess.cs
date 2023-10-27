@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 //impot linq
 using System.Linq;
@@ -40,5 +41,24 @@ namespace BookShoppingCartMVC.Controllers
             ViewBag.OrderId = id;
             return View(rs);
         }   
+        //Edit Order Status
+        public IActionResult Edit(int id)
+        {
+            var order = _context.Orders.Find(id);
+            ViewBag.UserID = _context.Users.Find(order.UserID).Id;
+            ViewBag.UserName = _context.Users.Find(order.UserID).UserName;
+            ViewData["OrderStatusId"] = new SelectList(_context.OrderStatus, "Id", "StatusName");
+            return View(order);
+        }
+        [HttpPost]
+        public IActionResult Edit(Order order)
+        {
+
+                _context.Orders.Update(order);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+     
+        }   
+        
     }
 }

@@ -175,12 +175,20 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account.Manage
             return result.ToString().ToLowerInvariant();
         }
 
+        //private string GenerateQrCodeUri(string email, string unformattedKey)
+        //{
+        //    return string.Format(
+        //        CultureInfo.InvariantCulture,
+        //        AuthenticatorUriFormat,
+        //        _urlEncoder.Encode("Microsoft.AspNetCore.Identity.UI"),
+        //        _urlEncoder.Encode(email),
+        //        unformattedKey);
+        //}
         private string GenerateQrCodeUri(string email, string unformattedKey)
         {
             return string.Format(
-                CultureInfo.InvariantCulture,
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("Microsoft.AspNetCore.Identity.UI"),
+                _urlEncoder.Encode("Razor Pages"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

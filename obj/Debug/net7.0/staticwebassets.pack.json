@@ -33,6 +33,22 @@
       "PackagePath": "staticwebassets\\images\\eb48a2ad-ce3e-40b5-9251-8b59a75a0b70-BeTuanMinhSwimlance.png"
     },
     {
+      "Id": "E:\\code\\Test\\BookStorebetun\\wwwroot\\js\\qr.js",
+      "PackagePath": "staticwebassets\\js\\qr.js"
+    },
+    {
+      "Id": "E:\\code\\Test\\BookStorebetun\\wwwroot\\lib\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\code\\Test\\BookStorebetun\\wwwroot\\lib\\qrcode.js",
+      "PackagePath": "staticwebassets\\lib\\qrcode.js"
+    },
+    {
+      "Id": "E:\\code\\Test\\BookStorebetun\\wwwroot\\lib\\qrcode.min.js",
+      "PackagePath": "staticwebassets\\lib\\qrcode.min.js"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BookShoppingCartMVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

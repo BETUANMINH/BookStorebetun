@@ -25,6 +25,8 @@
             <div class="alert alert-info">Learn how to <a href="https://go.microsoft.com/fwlink/?Linkid=852423">enable QR code generation</a>.</div>
             <div id="qrCode"></div>
             <div id="qrCodeData" data-url="@Model.AuthenticatorUri"></div>
+            @* <input id="text" type="text" value="@Model.SharedKey" style="width:80%" /><br />
+            <div id="qrcode"></div> *@
         </li>
         <li>
             <p>
@@ -47,7 +49,30 @@
         </li>
     </ol>
 </div>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode("qrcode");
+
+    function makeCode() {
+        var elText = document.getElementById("text");
+
+        if (!elText.value) {
+            alert("Input a text");
+            elText.focus();
+            return;
+        }
+
+        qrcode.makeCode(elText.value);
+    }
+
+    makeCode();
+
+    document.getElementById("text").addEventListener("input", makeCode);
+</script>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <script type="text/javascript" src="~/lib/qrcode.js"></script>
+    <script type="text/javascript" src="~/js/qr.js"></script>
 }

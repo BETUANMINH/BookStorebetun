@@ -113,7 +113,7 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account
             if (result.Succeeded)
             {
                 _logger.LogInformation("User with ID '{UserId}' logged in with 2fa.", user.Id);
-                return LocalRedirect(returnUrl);
+                return RedirectToAction("Index", "Home");
             }
             else if (result.IsLockedOut)
             {

@@ -12,25 +12,51 @@ namespace BookShoppingCartMVC.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public IActionResult Index(int OrderStatusId = 0)
         {
-            
+            if(OrderStatusId != 0)
+            {
+                var orders = (from o in _context.Orders
+                              join u in _context.Users on o.UserID equals u.Id
+                              join os in _context.OrderStatus on o.OrderStatusId equals os.Id
+                               where o.OrderStatusId == OrderStatusId
+                                  select new OrderUserView
+                               {
+                                  Id = o.Id,
+                                  UserName = u.UserName,
+                                  CreateDate = o.CreateDate,
+                                  StatusName = os.StatusName,
+                                  IsDeleted = o.IsDeleted
+                              }).ToList();
+                ViewBag.Orders = orders;
+                var orderStatus = _context.OrderStatus.ToList();
+                ViewBag.OrderStatus = orderStatus;
+                return View();
 
-            //select o.Id, u.UserName, o.CreateDate, o.OrderStatusId, o.IsDeleted from Order_HE176084 o join AspNetUsers_HE176084 u on o.UserID = u.Id
-            var orders = (from o in _context.Orders
-                          join u in _context.Users on o.UserID equals u.Id
-                          join os in _context.OrderStatus on o.OrderStatusId equals os.Id
-                         select new OrderUserView
-                                                                            {
-                              Id = o.Id,
-                              UserName = u.UserName,
-                              CreateDate = o.CreateDate,
-                              StatusName = os.StatusName,
-                              IsDeleted = o.IsDeleted
-                          }).ToList();
-            ViewBag.Orders = orders;
-            return View();
+            }
+            else
+            {
+                var orders = (from o in _context.Orders
+                                                           join u in _context.Users on o.UserID equals u.Id
+                                                                                        join os in _context.OrderStatus on o.OrderStatusId equals os.Id
+                                                                                                                     select new OrderUserView
+                                                                                                                     {
+                                  Id = o.Id,
+                                  UserName = u.UserName,
+                                  CreateDate = o.CreateDate,
+                                  StatusName = os.StatusName,
+                                  IsDeleted = o.IsDeleted
+                              }).ToList();
+                ViewBag.Orders = orders;
+                var orderStatus = _context.OrderStatus.ToList();
+                ViewBag.OrderStatus = orderStatus;
+                return View();
+            }
+
+            
         }
+
+        
         //View Order Details
         public IActionResult Details(int id)
         {

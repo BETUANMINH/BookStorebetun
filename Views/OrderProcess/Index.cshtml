@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BookShoppingCartMVC.Models.Order>
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@{
+@{ 
     ViewData["Title"] = "Index";
 }
 
@@ -13,9 +13,9 @@
             <label class="visually-hidden" for="OrderStatusId">Order Status</label>
             <select class="form-select" id="OrderStatusId" name="OrderStatusId">
                 <option selected>Order Status</option>
-                @foreach (var s in ViewBag.OrderStatus)
+                @foreach (var s in @ViewBag.OrderStatus)
                 {
-                    <option value="@s.Id" selected="@(s.Id == ViewBag.OrderStatusId)">@s.StatusName</option>
+                    <option value="@s.Id" selected="@(s.Id == @ViewBag.OrderStatusId)">@s.StatusName</option>
                 }
 
             </select>

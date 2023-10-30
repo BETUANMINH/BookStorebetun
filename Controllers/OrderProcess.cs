@@ -37,10 +37,10 @@ namespace BookShoppingCartMVC.Controllers
             else
             {
                 var orders = (from o in _context.Orders
-                                                           join u in _context.Users on o.UserID equals u.Id
-                                                                                        join os in _context.OrderStatus on o.OrderStatusId equals os.Id
-                                                                                                                     select new OrderUserView
-                                                                                                                     {
+                             join u in _context.Users on o.UserID equals u.Id
+                              join os in _context.OrderStatus on o.OrderStatusId equals os.Id
+                                select new OrderUserView
+                              {
                                   Id = o.Id,
                                   UserName = u.UserName,
                                   CreateDate = o.CreateDate,
@@ -50,6 +50,7 @@ namespace BookShoppingCartMVC.Controllers
                 ViewBag.Orders = orders;
                 var orderStatus = _context.OrderStatus.ToList();
                 ViewBag.OrderStatus = orderStatus;
+
                 return View();
             }
 

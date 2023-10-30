@@ -39,29 +39,29 @@
 @foreach (var book in Model.Books)
 {
     
-<div class="card border-secondary mb-3 mx-3 mt-4 " style="max-width: 22rem;">
-            <div class="card-header"></div>
-            @if (string.IsNullOrEmpty(book.Image))
-            {
-                <img style="width:100%;height:100%" src="/images/NoImage.png" class="card-img-top" alt="...">
+    <div class="card border-secondary mb-3 mx-3 mt-4 " style="max-width: 400px;">
+                <div class="card-header"></div>
+                @if (string.IsNullOrEmpty(book.Image))
+                {
+                <img style="width:400px;height:400px" src="/images/NoImage.png" class="card-img-top" alt="...">
 
-            }
-            else
-            {
-                  <img src="/images/@book.Image" class="card-img-top" alt="...">
+                }
+                else
+                {
+                <img src="/images/@book.Image" style="width:400px;height:400px" class="card-img-top" alt="...">
                 
-            }
-    <div class="card-body">
-        <h4 class="card-title">@book.BookName</h4>
-        <p class="card-text">
-                    <b>Genre:</b>  @book.GenreName
-            <br />
-                    <b>Author:</b>  @book.AuthorName <br />
-                    <b>Price:</b> @book.Price <br />
-        </p>
-        <button type="button" onclick="add(@book.Id)" class="btn btn-primary">Add to Cart</button>
+                }
+        <div class="card-body">
+            <h4 class="card-title">@book.BookName</h4>
+            <p class="card-text">
+                        <b>Genre:</b>  @book.GenreName
+                <br />
+                        <b>Author:</b>  @book.AuthorName <br />
+                        <b>Price:</b> @book.Price <br />
+            </p>
+            <button type="button" onclick="add(@book.Id)" class="btn btn-primary">Add to Cart</button>
+        </div>
     </div>
-</div>
 }
 </div>
 @section Scripts {

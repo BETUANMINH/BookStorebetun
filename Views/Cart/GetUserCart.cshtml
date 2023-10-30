@@ -48,7 +48,25 @@
                 <h5>Total(VND):</h5> @(Model.CartDetails.Sum(x => x.Book.Price * x.Quantity))
             </div>
             <div class="my-2">
-                <a class="btn btn-primary" href="/Cart/CheckOut">Checkout</a>
+            <a class="btn btn-primary" href="/Cart/CheckOut" id="checkoutbtn">Checkout</a>
+            <script>
+                document.getElementById("checkoutbtn").addEventListener("click", function (e) {
+                    e.preventDefault();
+                    Swal.fire({
+                        title: 'Confirmation',
+                        text: 'Are you sure you want to cancel this order?',
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonText: 'Yes',
+                        cancelButtonText: 'No'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Redirect to the cancellation link when "Yes" is clicked
+                            window.location.href = e.target.href;
+                        }
+                    });
+                });
+            </script>
             </div>
     }
     else

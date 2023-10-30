@@ -10,15 +10,16 @@ namespace BookShoppingCartMVC.Services
         public EmailSenderCustom()
         {
         }
-        public async Task SendEmailConfirmRegister(string emailreceive, string content, string namereceive)
+        public async Task SendEmailConfirmRegister(string emailreceive, string content, string namereceive, string subject)
         {
             var emailMessage = new MimeMessage();
             emailMessage.From.Add(new MailboxAddress("BeTun Store", "beminh22032003@gmail.com"));
             emailMessage.To.Add(new MailboxAddress(namereceive, emailreceive));
-            emailMessage.Subject = "Comfirm Register";
-            emailMessage.Body = new TextPart("plain") {
+            emailMessage.Subject = subject;
+            emailMessage.Body = new TextPart("html")
+            {
                 Text = content
-        };
+            };
 
             using var client = new SmtpClient();
             await client.ConnectAsync("smtp.gmail.com", 587);

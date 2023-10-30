@@ -2,6 +2,6 @@
 {
     public interface IEmailSenderCustom
     {
-        Task SendEmailConfirmRegister(string emailreceive, string content, string namereceive);
+        Task SendEmailConfirmRegister(string emailreceive, string content, string namereceive, string subject);
     }
 }

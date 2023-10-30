@@ -75,7 +75,7 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account
                 await _emailSenderCustom.SendEmailConfirmRegister(
                     user.Email,
                     $"Reset Password by click this link {callbackUrl}",
-                    user.Email);
+                    user.Email, "Reset Password");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }

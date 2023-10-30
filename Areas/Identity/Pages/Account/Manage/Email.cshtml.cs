@@ -131,7 +131,7 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account.Manage
                     await _emailSenderCustom.SendEmailConfirmRegister(
                     email,
                     "Confirm your email \n"+
-                    $"Please confirm your account by <a href='{callbackUrl}'>clicking here</a>.",email);
+                    $"Please confirm your account by <a href='{callbackUrl}'>clicking here</a>.",email,"Confirm Email Change");
 
                 StatusMessage = "Confirmation link to change email sent. Please check your email.";
                 return RedirectToPage();
@@ -167,7 +167,7 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account.Manage
             await _emailSenderCustom.SendEmailConfirmRegister (
                 email,
                 "Confirm your email",
-                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.", "Confirm Email Change");
 
             StatusMessage = "Verification email sent. Please check your email.";
             return RedirectToPage();

@@ -148,7 +148,7 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
                      await _emailSenderCustom.SendEmailConfirmRegister(user.Email,
-                                               $"Please confirm your account by {EmailConfirmationUrl}",user.Email);
+                                               $"Please confirm your account by {EmailConfirmationUrl}",user.Email,"Confirm Register");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

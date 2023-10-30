@@ -129,9 +129,9 @@ namespace BookShoppingCartMVC.Areas.Identity.Pages.Account.Manage
                     values: new { area = "Identity", userId = userId, email = Input.NewEmail, code = code },
                     protocol: Request.Scheme);
                     await _emailSenderCustom.SendEmailConfirmRegister(
-                    Input.NewEmail,
+                    email,
                     "Confirm your email \n"+
-                    $"Please confirm your account by <a href='{callbackUrl}'>clicking here</a>.",Input.NewEmail);
+                    $"Please confirm your account by <a href='{callbackUrl}'>clicking here</a>.",email);
 
                 StatusMessage = "Confirmation link to change email sent. Please check your email.";
                 return RedirectToPage();

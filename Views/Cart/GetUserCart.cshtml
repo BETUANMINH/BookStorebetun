@@ -71,6 +71,13 @@
     }
     else
     {
-        <h5>There is no item in your cart</h5>
+        @if(ViewBag.error != null)
+        {
+            <h5>@ViewBag.error</h5>
+        }
+        else
+        {
+            <h5>There is no item in your cart</h5>
+        }
     }
 </div>

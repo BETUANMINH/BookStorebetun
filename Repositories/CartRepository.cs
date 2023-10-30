@@ -131,7 +131,7 @@ namespace BookShoppingCartMVC.Repositories
             var userId = GetUserId();
             if(userId is null)
             {
-                throw new Exception("Invalid userid");
+                return null;
             }
             var shoppingCarts = await _db.ShoppingCarts
                 .Include(c => c.CartDetails).

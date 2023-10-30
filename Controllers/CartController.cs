@@ -29,6 +29,11 @@ namespace BookShoppingCartMVC.Controllers
         public async Task<IActionResult> GetUserCart()
         {
             var cart = await _cartRepo.GetUserCart();
+            if (cart is null)
+            {
+                ViewBag.Error = "You are not logged in";
+                return View();
+            }
             return View(cart);
         }
         public async Task<IActionResult> GetTotalItemInCart()

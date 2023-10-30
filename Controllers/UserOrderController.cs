@@ -17,6 +17,14 @@ namespace BookShoppingCartMVC.Controllers
 
             return View(orders);
         }
+        //change status order to Cancelled
+        [Authorize]
+        public async Task<IActionResult> CancelOrder(int id)
+        {
+            await _userOrderRepository.CancelOrder(id);
+
+            return RedirectToAction("UserOrders");
+        }
 
     }
 }

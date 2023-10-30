@@ -37,5 +37,13 @@ namespace BookShoppingCartMVC.Repositories
             string userId = _userManager.GetUserId(user);
             return userId;
         }
+        //change status order to Cancelled
+        public async Task CancelOrder(int id)
+        {
+            var order = await _db.Orders.FindAsync(id);
+            order.OrderStatusId = 4;
+            _db.Orders.Update(order);
+            await _db.SaveChangesAsync();
+        }
     }
 }

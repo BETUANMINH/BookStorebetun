@@ -8,16 +8,19 @@ using Microsoft.EntityFrameworkCore;
 using BookShoppingCartMVC.Data;
 using BookShoppingCartMVC.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using BookShoppingCartMVC.Constants;
 
 namespace BookShoppingCartMVC.Controllers
 {
     public class AspNetUsersController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public AspNetUsersController(ApplicationDbContext context)
+        private readonly UserManager<IdentityUser> _userManager;
+        public AspNetUsersController(ApplicationDbContext context,  UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: AspNetUsers
@@ -60,12 +63,31 @@ namespace BookShoppingCartMVC.Controllers
         public async Task<IActionResult> Create(IdentityUser aspNetUsers)
         {
 
-                _context.Add(aspNetUsers);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            var user = new IdentityUser
+            {
+                UserName = aspNetUsers.Email,
+                Email = aspNetUsers.Email
+            };
+
+            var result = await _userManager.CreateAsync(user, aspNetUsers.PasswordHash);
+            await _userManager.AddToRoleAsync(user, Roles.User.ToString());
+
+            return RedirectToAction(nameof(Index));
 
         }
-
+        private IdentityUser CreateUser()
+        {
+            try
+            {
+                return Activator.CreateInstance<IdentityUser>();
+            }
+            catch
+            {
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
+                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                    $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
+            }
+        }
         // GET: AspNetUsers/Edit/5
         public async Task<IActionResult> Edit(string id)
         {

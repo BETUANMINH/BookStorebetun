@@ -10,9 +10,11 @@ using BookShoppingCartMVC.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using BookShoppingCartMVC.Constants;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookShoppingCartMVC.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AspNetUsersController : Controller
     {
         private readonly ApplicationDbContext _context;

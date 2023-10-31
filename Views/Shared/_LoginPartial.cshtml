@@ -3,12 +3,16 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
+    @if (User.IsInRole("User"))
+    {
+
     <li class="nav-item">
         <a class="nav-link" href="/Cart/GetUserCart">
             <span id="CartCount" class="badge text-bg-light">0</span>
             <i class="bi bi-cart"></i>
         </a>
     </li>
+    }
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">

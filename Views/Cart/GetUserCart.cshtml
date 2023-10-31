@@ -1,4 +1,7 @@
 ﻿@model ShoppingCart;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @{
     ViewData["Title"] = "GetUserCart";
 }
@@ -75,9 +78,12 @@
         {
             <h5>@ViewBag.error</h5>
         }
-        else
+        else if (User.Identity.IsAuthenticated)
         {
-            <h5>There is no item in your cart</h5>
+            <h5>Your cart is empty</h5>
         }
+
+        
+
     }
 </div>

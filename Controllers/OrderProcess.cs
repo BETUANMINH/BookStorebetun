@@ -31,6 +31,7 @@ namespace BookShoppingCartMVC.Controllers
                 ViewBag.Orders = orders;
                 var orderStatus = _context.OrderStatus.ToList();
                 ViewBag.OrderStatus = orderStatus;
+                ViewBag.OrderStatusId = OrderStatusId;
                 return View();
 
             }
@@ -48,6 +49,7 @@ namespace BookShoppingCartMVC.Controllers
                                   IsDeleted = o.IsDeleted
                               }).ToList();
                 ViewBag.Orders = orders;
+                ViewBag.OrderStatusId = OrderStatusId;
                 var orderStatus = _context.OrderStatus.ToList();
                 ViewBag.OrderStatus = orderStatus;
 

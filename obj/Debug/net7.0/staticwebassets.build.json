@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OYIiA17H/YXE5qP1djA+PIRyDPjgO1xBaT8/Lvs84yQ=",
+  "Hash": "09AMDlBZmyj5xfabdxVcNfV44yEnl4pXWDlGUK9VSq0=",
   "Source": "BookShoppingCartMVC",
   "BasePath": "_content/BookShoppingCartMVC",
   "Mode": "Default",
@@ -1122,6 +1122,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\19e4fc60-c633-415d-843f-fd4fc1b9ca54-toi_khong_lam.jpg",
+      "SourceId": "BookShoppingCartMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
+      "BasePath": "_content/BookShoppingCartMVC",
+      "RelativePath": "images/19e4fc60-c633-415d-843f-fd4fc1b9ca54-toi_khong_lam.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\19e4fc60-c633-415d-843f-fd4fc1b9ca54-toi_khong_lam.jpg"
+    },
+    {
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\3ea08c1e-149e-4bd0-8530-4bf3635eeae2-tre_con_thi_biet_cai_lon_gi.jpg",
+      "SourceId": "BookShoppingCartMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
+      "BasePath": "_content/BookShoppingCartMVC",
+      "RelativePath": "images/3ea08c1e-149e-4bd0-8530-4bf3635eeae2-tre_con_thi_biet_cai_lon_gi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3ea08c1e-149e-4bd0-8530-4bf3635eeae2-tre_con_thi_biet_cai_lon_gi.jpg"
+    },
+    {
       "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\5f2456be-3d8d-42d7-b1af-6e02eb03c7d4-Screenshot 2023-09-18 134254.png",
       "SourceId": "BookShoppingCartMVC",
       "SourceType": "Discovered",
@@ -1137,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\5f2456be-3d8d-42d7-b1af-6e02eb03c7d4-Screenshot 2023-09-18 134254.png"
+    },
+    {
+      "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\a411f48e-5871-4453-878e-23bb9c16d028-ket-ban-voi-tao.jpg",
+      "SourceId": "BookShoppingCartMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\code\\Test\\BookStorebetun\\wwwroot\\",
+      "BasePath": "_content/BookShoppingCartMVC",
+      "RelativePath": "images/a411f48e-5871-4453-878e-23bb9c16d028-ket-ban-voi-tao.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a411f48e-5871-4453-878e-23bb9c16d028-ket-ban-voi-tao.jpg"
     },
     {
       "Identity": "E:\\code\\Test\\BookStorebetun\\wwwroot\\images\\eb48a2ad-ce3e-40b5-9251-8b59a75a0b70-BeTuanMinhSwimlance.png",

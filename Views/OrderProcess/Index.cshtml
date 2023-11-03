@@ -24,6 +24,16 @@
 
     </form>
 </div>
+@if(ViewBag.Orders.Count == 0)
+{
+    <div class="alert alert-warning" role="alert">
+        No Order Found!
+    </div>
+}
+else
+{
+    
+
 <table class="table">
     <thead>
         <tr>
@@ -79,6 +89,7 @@
 }
     </tbody>
 </table>
+}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {

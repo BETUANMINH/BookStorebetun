@@ -10,5 +10,6 @@ namespace BookShoppingCartMVC
         Task<int> GetCartItemCount(string userId = "");
         Task<ShoppingCart> GetCart(string userId);
         Task<bool> DoCheck();
+        Task<int> RemoveItemAll(int BookId);
     }
 }

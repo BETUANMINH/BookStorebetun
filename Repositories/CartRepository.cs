@@ -126,6 +126,44 @@ namespace BookShoppingCartMVC.Repositories
 
 
         }
+        //remove all specific item
+        public async Task<int> RemoveItemAll(int BookId)
+        {
+            //using var transaction = _db.Database.BeginTransaction();
+            string userId = GetUserId();
+            try
+            {
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    throw new Exception("User is not logged in");
+                }
+                var cart = await GetCart(userId);
+
+                if (cart is null)
+                {
+                    throw new Exception("Invalid cart");
+                }
+                var cartItem = await _db.CartDetails
+                    .FirstOrDefaultAsync(a => a.ShoppingCartId == cart.Id && a.BookId == BookId);
+                if (cartItem is null)
+                {
+                    throw new Exception("Item not found in cart");
+                }
+                else
+                {
+                    _db.CartDetails.Remove(cartItem);
+                }
+                _db.SaveChanges();
+
+                //transaction.Commit();
+            }
+            catch (Exception)
+            {
+            }
+            var totalItems = await GetCartItemCount(userId);
+            return totalItems;  
+        }
         public async Task<ShoppingCart> GetUserCart()
         {
             var userId = GetUserId();

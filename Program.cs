@@ -17,12 +17,17 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.Sign
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultUI()
     .AddDefaultTokenProviders();
-
+builder.Services.AddAuthentication().AddFacebook(opt =>
+{
+    opt.ClientId = "1512258052960420";
+    opt.ClientSecret = "f077ba15bf25796f2d96f8d7a266f10a";
+});
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IHomeRepository, HomeRepository>();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
 builder.Services.AddTransient<IUserOrderRepository, UserOrderRepository>();
 builder.Services.AddTransient<IEmailSenderCustom, EmailSenderCustom>();
+
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
@@ -50,7 +55,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Books}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

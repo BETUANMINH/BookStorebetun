@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JDig+tkILemGwP+hkPDrLDwrrtOyx19+/eXbU4jxpTz3I2qW7OIWfhIR72Svx1Y9LCdpft0bPxkM+K5y8fjasQ==",
+  "dgSpecHash": "NXcpGoA/QZ5Asgya+iQf7yqA58dJiF53k5txGSI0VbVPtdHejnBZKqGi4fOEfjJWJ04s1GYPKzRLE3D04saE3w==",
   "success": true,
   "projectFilePath": "E:\\code\\Test\\BookStorebetun\\BookShoppingCartMVC.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mailkit\\4.2.0\\mailkit.4.2.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\7.0.13\\microsoft.aspnetcore.authentication.facebook.7.0.13.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.11\\microsoft.aspnetcore.cryptography.internal.7.0.11.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.11\\microsoft.aspnetcore.cryptography.keyderivation.7.0.11.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\7.0.13\\microsoft.aspnetcore.diagnostics.entityframeworkcore.7.0.13.nupkg.sha512",

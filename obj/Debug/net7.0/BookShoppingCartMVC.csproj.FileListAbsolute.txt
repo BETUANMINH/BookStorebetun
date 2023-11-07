@@ -585,3 +585,4 @@ E:\code\Test\BookStorebetun\bin\Debug\net7.0\MailKit.dll
 E:\code\Test\BookStorebetun\bin\Debug\net7.0\MimeKit.dll
 E:\code\Test\BookStorebetun\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
 E:\code\Test\BookStorebetun\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+E:\code\Test\BookStorebetun\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Facebook.dll

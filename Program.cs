@@ -19,8 +19,11 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.Sign
     .AddDefaultTokenProviders();
 builder.Services.AddAuthentication().AddFacebook(opt =>
 {
-    opt.ClientId = "1512258052960420";
-    opt.ClientSecret = "f077ba15bf25796f2d96f8d7a266f10a";
+    var clientId = builder.Configuration["Facebook:ClientId"];
+    var clientSecret = builder.Configuration["Facebook:ClientSecret"];
+
+    opt.ClientId = clientId;
+    opt.ClientSecret = clientSecret;
 });
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IHomeRepository, HomeRepository>();

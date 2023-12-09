@@ -8,14 +8,24 @@
     <form asp-action="Index" class="row gy-2 gx-3 align-items-center">
         <div class="col-auto">
             <label class="visually-hidden" for="genreId">Genre</label>
+            Genre
             <select class="form-select" id="genreId" name="genreId">
-                <option selected>Genre</option>
+                <option selected>All</option>
                 @foreach (var genre in Model.Genres)
                 {
                     <option value="@genre.Id" selected ="@(genre.Id == Model.GenreId)">@genre.GenreName</option>
                 }
               
             </select>
+            <br />
+            Currency
+            <select class="form-select" id="currency" name="currency">
+                <option selected>USD</option>
+                <option value="EUR">EUR</option>
+                <
+
+            </select>
+
         </div>
 
   <div class="col-12">
@@ -57,7 +67,16 @@
                         <b>Genre:</b>  @book.GenreName
                 <br />
                         <b>Author:</b>  @book.AuthorName <br />
-                        <b>Price:</b> @book.Price <br />
+                        <b>Price:</b> @book.Price
+                    @if(ViewBag.Currency == "EUR")
+                     {
+                        <b>EUR</b>
+                    }
+                    else
+                    {
+                        <b>USD</b>
+                    }
+                    
             </p>
             <button type="button" onclick="add(@book.Id)" class="btn btn-primary">Add to Cart</button>
         </div>

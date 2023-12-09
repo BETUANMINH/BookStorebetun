@@ -19,14 +19,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/Home/Index">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Home/Index">
                             Home
                             <span class="visually-hidden">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/Home/Privacy">Privacy</a>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="/Home/Privacy">Privacy</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/UserOrder/UserOrders">My Order</a>
                     </li>
                     @using Microsoft.AspNetCore.Identity
                     @inject SignInManager<IdentityUser> SignInManager
@@ -35,20 +38,20 @@
                     {
                         @if (User.IsInRole("Admin"))
                         {
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/Books/Index">
+                            <li class="nav-item active">
+                                <a class="nav-link " href="/Books/Index">
                                     Books
                                     <span class="visually-hidden">(current)</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/Genres/Index">
+                            <li class="nav-item active">
+                                <a class="nav-link " href="/Genres/Index">
                                     Genres
                                     <span class="visually-hidden">(current)</span>
                                 </a>
                             </li
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/OrderProcess/Index">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/OrderProcess/Index">
                                     Orders
                                     <span class="visually-hidden">(current)</span>
                                 </a>
